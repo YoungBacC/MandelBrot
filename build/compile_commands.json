@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/jackolson/Documents/Dev/C++/MandelBrot/build",
+  "command": "/usr/bin/c++ -DSFML_STATIC -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/jackolson/Documents/Dev/C++/MandelBrot/src/main.cpp",
+  "file": "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/jackolson/Documents/Dev/C++/MandelBrot/build",
+  "command": "/usr/bin/c++ -DSFML_STATIC -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/graph.cpp.o -c /Users/jackolson/Documents/Dev/C++/MandelBrot/src/graph.cpp",
+  "file": "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/graph.cpp",
+  "output": "CMakeFiles/main.dir/src/graph.cpp.o"
+},
+{
+  "directory": "/Users/jackolson/Documents/Dev/C++/MandelBrot/build",
+  "command": "/usr/bin/c++ -DSFML_STATIC -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/complex.cpp.o -c /Users/jackolson/Documents/Dev/C++/MandelBrot/src/complex.cpp",
+  "file": "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/complex.cpp",
+  "output": "CMakeFiles/main.dir/src/complex.cpp.o"
+},
+{
+  "directory": "/Users/jackolson/Documents/Dev/C++/MandelBrot/build",
+  "command": "/usr/bin/c++ -DSFML_STATIC -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/point.cpp.o -c /Users/jackolson/Documents/Dev/C++/MandelBrot/src/point.cpp",
+  "file": "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/point.cpp",
+  "output": "CMakeFiles/main.dir/src/point.cpp.o"
+},
+{
+  "directory": "/Users/jackolson/Documents/Dev/C++/MandelBrot/build",
+  "command": "/usr/bin/c++ -DSFML_STATIC -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/mandelbrot.cpp.o -c /Users/jackolson/Documents/Dev/C++/MandelBrot/src/mandelbrot.cpp",
+  "file": "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/mandelbrot.cpp",
+  "output": "CMakeFiles/main.dir/src/mandelbrot.cpp.o"
+}
+]

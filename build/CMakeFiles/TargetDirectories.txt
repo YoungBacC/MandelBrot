@@ -1,0 +1,3 @@
+/Users/jackolson/Documents/Dev/C++/MandelBrot/build/CMakeFiles/main.dir
+/Users/jackolson/Documents/Dev/C++/MandelBrot/build/CMakeFiles/edit_cache.dir
+/Users/jackolson/Documents/Dev/C++/MandelBrot/build/CMakeFiles/rebuild_cache.dir
