@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/graph.cpp" "CMakeFiles/main.dir/src/graph.cpp.o" "gcc" "CMakeFiles/main.dir/src/graph.cpp.o.d"
   "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
   "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/mandelbrot.cpp" "CMakeFiles/main.dir/src/mandelbrot.cpp.o" "gcc" "CMakeFiles/main.dir/src/mandelbrot.cpp.o.d"
-  "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/point.cpp" "CMakeFiles/main.dir/src/point.cpp.o" "gcc" "CMakeFiles/main.dir/src/point.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

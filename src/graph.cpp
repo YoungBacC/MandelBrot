@@ -1,89 +1,55 @@
 #include "headers/graph.h"
 
-// constants
-const unsigned AXIS_WIDTH = 2;
-const sf::Color AXIS_COLOR = sf::Color::White;
-const double POINT_RADIUS = 0.5;
-const sf::Color POINT_COLOR = sf::Color::Red;
-
-Graph::Graph(const sf::RenderWindow &win) {
+// constructor
+Graph::Graph(const sf::RenderWindow &win)
+    : canvas(win.getSize(), sf::Color::White), canvasTexture(canvas),
+      canvasSprite(canvasTexture) {
+  sf::Image image(win.getSize(), sf::Color::White);
   origin = sf::Vector2f(win.getSize().x / 2.0, win.getSize().y / 2.0);
   scale = 1;
 }
 
-Graph::Graph(const sf::RenderWindow &win, const double s) {
-  origin = sf::Vector2f(win.getSize().x / 2.0, win.getSize().y / 2.0);
-  scale = s;
-}
-
-Graph::Graph(const sf::RenderWindow &win, const sf::Vector2f &o,
-             const double s) {
-  origin =
-      sf::Vector2f(win.getSize().x / 2.0 + o.x, win.getSize().y / 2.0 - o.y);
-  scale = s;
-}
-
-void Graph::drawAxes(sf::RenderWindow &win) {
-  // create graph
-  complexAxis.setPosition({origin.x - AXIS_WIDTH / 2.f, 0});
-  complexAxis.setFillColor(AXIS_COLOR);
-  complexAxis.setSize(sf::Vector2f(AXIS_WIDTH, win.getSize().y));
-
-  realAxis.setPosition({0, origin.y - AXIS_WIDTH / 2.f});
-  realAxis.setFillColor(AXIS_COLOR);
-  realAxis.setSize(sf::Vector2f(win.getSize().x, AXIS_WIDTH));
-
-  win.draw(complexAxis);
-  win.draw(realAxis);
-}
-
+// setters
 void Graph::setOrigin(const sf::RenderWindow &win, const sf::Vector2f &o) {
-  origin =
-      sf::Vector2f(win.getSize().x / 2.0 + o.x, win.getSize().y / 2.0 - o.y);
-
-  complexAxis.setPosition({origin.x - AXIS_WIDTH / 2.f, 0});
-  complexAxis.setFillColor(AXIS_COLOR);
-  complexAxis.setSize(sf::Vector2f(AXIS_WIDTH, win.getSize().y));
-
-  realAxis.setPosition({0, origin.y - AXIS_WIDTH / 2.f});
-  realAxis.setFillColor(AXIS_COLOR);
-  realAxis.setSize(sf::Vector2f(win.getSize().x, AXIS_WIDTH));
+  float newX = win.getSize().x / 2.0 + o.x;
+  float newY = win.getSize().y / 2.0 - o.y;
+  origin = sf::Vector2f(newX, newY);
 }
 
 void Graph::setScale(const double s) { scale = s; }
 
+// getters
 sf::Vector2f Graph::getOrigin() { return origin; }
-
 double Graph::getScale() { return scale; }
+sf::Sprite Graph::getCanvas() { return canvasSprite; }
 
-std::vector<Point *> Graph::getPoints() { return points; }
+// other functions
 
-void Graph::addPoint(const sf::Vector2f &pos, const sf::RenderWindow &win) {
-  Point *point =
-      new Point(pos, positionPoint(pos, win), POINT_RADIUS, POINT_COLOR);
-  points.push_back(point);
+void Graph::drawPoint(const sf::Vector2u &pos) {
+  canvas.setPixel(pos, sf::Color::Black);
 }
 
-void Graph::drawPoints(sf::RenderWindow &win) {
-  for (auto i : points) {
-    sf::Vector2f pos = i->getPos();
-    sf::Vector2f newPos = positionPoint(pos, win);
-    i->setRenderPos(newPos);
-    win.draw(i->getPoint());
+void Graph::drawPointIt(const sf::Vector2u &pos, unsigned it) {
+  sf::Color color;
+  if (it > 35) {
+    color = sf::Color::Red;
+  } else if (it > 25) {
+    color = sf::Color::Yellow;
+  } else if (it > 15) {
+    color = sf::Color::White;
+  } else {
+    color = sf::Color::Blue;
   }
+
+  canvas.setPixel(pos, color);
 }
 
-sf::Vector2f Graph::positionPoint(const sf::Vector2f &pos,
-                                  const sf::RenderWindow &win) {
-  float tick = win.getSize().y / scale;
-  float posX = (origin.x + pos.x - POINT_RADIUS) + pos.x * tick;
-  float posY = (origin.y - pos.y - POINT_RADIUS) - pos.y * tick;
-  return sf::Vector2f(posX, posY);
-}
+void Graph::updateTexture() { canvasTexture.update(canvas); }
 
-void Graph::clearPoints() {
-  for (auto i : points) {
-    delete i;
-  }
-  points.clear();
+sf::Vector2f Graph::convertWinToComplex(const sf::Vector2u &winCoord,
+                                        const sf::RenderWindow &win) {
+  float newX = (2 * scale / win.getSize().y) * (winCoord.x) - scale;
+  float newY = (2 * scale / win.getSize().y) * (winCoord.y) - scale;
+
+  return sf::Vector2f(newX, newY);
 }

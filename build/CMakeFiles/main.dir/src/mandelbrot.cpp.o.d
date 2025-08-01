@@ -1076,4 +1076,4 @@ CMakeFiles/main.dir/src/mandelbrot.cpp.o: \
   /opt/homebrew/include/SFML/System/MemoryInputStream.hpp \
   /opt/homebrew/include/SFML/System/Sleep.hpp \
   /Users/jackolson/Documents/Dev/C++/MandelBrot/src/headers/graph.h \
-  /Users/jackolson/Documents/Dev/C++/MandelBrot/src/headers/point.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream

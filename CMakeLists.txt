@@ -11,7 +11,7 @@ set(SFML_STATIC_LIBRARIES TRUE)
 
 add_definitions(-DSFML_STATIC)
 
-add_executable(main src/main.cpp src/graph.cpp src/complex.cpp src/point.cpp src/mandelbrot.cpp)
+add_executable(main src/main.cpp src/graph.cpp src/complex.cpp src/mandelbrot.cpp)
 
 target_link_libraries(main PRIVATE SFML::System SFML::Graphics SFML::Window)
 

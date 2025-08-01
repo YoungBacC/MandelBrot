@@ -19,12 +19,6 @@
 },
 {
   "directory": "/Users/jackolson/Documents/Dev/C++/MandelBrot/build",
-  "command": "/usr/bin/c++ -DSFML_STATIC -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/point.cpp.o -c /Users/jackolson/Documents/Dev/C++/MandelBrot/src/point.cpp",
-  "file": "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/point.cpp",
-  "output": "CMakeFiles/main.dir/src/point.cpp.o"
-},
-{
-  "directory": "/Users/jackolson/Documents/Dev/C++/MandelBrot/build",
   "command": "/usr/bin/c++ -DSFML_STATIC -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/mandelbrot.cpp.o -c /Users/jackolson/Documents/Dev/C++/MandelBrot/src/mandelbrot.cpp",
   "file": "/Users/jackolson/Documents/Dev/C++/MandelBrot/src/mandelbrot.cpp",
   "output": "CMakeFiles/main.dir/src/mandelbrot.cpp.o"

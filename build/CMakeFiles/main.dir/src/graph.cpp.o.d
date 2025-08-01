@@ -1,7 +1,6 @@
 CMakeFiles/main.dir/src/graph.cpp.o: \
   /Users/jackolson/Documents/Dev/C++/MandelBrot/src/graph.cpp \
   /Users/jackolson/Documents/Dev/C++/MandelBrot/src/headers/graph.h \
-  /Users/jackolson/Documents/Dev/C++/MandelBrot/src/headers/point.h \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
   /opt/homebrew/include/SFML/Graphics/Export.hpp \

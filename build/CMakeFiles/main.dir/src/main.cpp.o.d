@@ -1075,5 +1075,4 @@ CMakeFiles/main.dir/src/main.cpp.o: \
   /opt/homebrew/include/SFML/System/InputStream.hpp \
   /opt/homebrew/include/SFML/System/MemoryInputStream.hpp \
   /opt/homebrew/include/SFML/System/Sleep.hpp \
-  /Users/jackolson/Documents/Dev/C++/MandelBrot/src/headers/graph.h \
-  /Users/jackolson/Documents/Dev/C++/MandelBrot/src/headers/point.h
+  /Users/jackolson/Documents/Dev/C++/MandelBrot/src/headers/graph.h

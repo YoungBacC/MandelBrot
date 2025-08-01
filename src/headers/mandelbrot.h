@@ -18,7 +18,7 @@ public:
 
   ComplexNumber function(const ComplexNumber &, const ComplexNumber &);
 
-  bool calculate(const ComplexNumber &);
+  bool calculate(const ComplexNumber &, int &);
 
   void loop(Graph &, sf::RenderWindow &win);
 };

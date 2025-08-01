@@ -225,30 +225,6 @@ src/mandelbrot.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mandelbrot.cpp.s
 .PHONY : src/mandelbrot.cpp.s
 
-src/point.o: src/point.cpp.o
-.PHONY : src/point.o
-
-# target to build an object file
-src/point.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/point.cpp.o
-.PHONY : src/point.cpp.o
-
-src/point.i: src/point.cpp.i
-.PHONY : src/point.i
-
-# target to preprocess a source file
-src/point.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/point.cpp.i
-.PHONY : src/point.cpp.i
-
-src/point.s: src/point.cpp.s
-.PHONY : src/point.s
-
-# target to generate assembly for a file
-src/point.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/point.cpp.s
-.PHONY : src/point.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -270,9 +246,6 @@ help:
 	@echo "... src/mandelbrot.o"
 	@echo "... src/mandelbrot.i"
 	@echo "... src/mandelbrot.s"
-	@echo "... src/point.o"
-	@echo "... src/point.i"
-	@echo "... src/point.s"
 .PHONY : help
 
 
