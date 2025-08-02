@@ -1890,6 +1890,7 @@ CMakeFiles/main.dir/src/graph.cpp.o: /Users/jackolson/Documents/Dev/C++/MandelBr
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/limits \
@@ -4311,9 +4312,9 @@ CMakeFiles/main.dir/src/mandelbrot.cpp.o: /Users/jackolson/Documents/Dev/C++/Man
   /opt/homebrew/include/SFML/Window/WindowHandle.hpp
 
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream:
-
 /Users/jackolson/Documents/Dev/C++/MandelBrot/src/headers/mandelbrot.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream:
 
 /Users/jackolson/Documents/Dev/C++/MandelBrot/src/graph.cpp:
 

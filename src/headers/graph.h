@@ -1,14 +1,15 @@
 // #pragma once
 #include <SFML/Graphics.hpp>
+#include <cstdint>
 
 class Graph {
 private:
   sf::Vector2f origin;
+  sf::Vector2f center;
   double scale;
   sf::Image canvas;
   sf::Texture canvasTexture;
   sf::Sprite canvasSprite;
-  ;
 
 public:
   // constructors:
@@ -20,16 +21,18 @@ public:
   // setter
   void setOrigin(const sf::RenderWindow &, const sf::Vector2f &);
   void setScale(const double);
+  void setCenter(const sf::Vector2f &);
 
   // getter
   sf::Vector2f getOrigin();
   double getScale();
   sf::Sprite getCanvas();
+  sf::Vector2f getCenter();
 
   // public methods
   void drawPoint(const sf::Vector2u &);
 
-  void drawPointIt(const sf::Vector2u &, unsigned);
+  void drawPointIt(const sf::Vector2u &, unsigned, unsigned);
 
   void updateTexture();
 

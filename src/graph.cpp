@@ -1,4 +1,5 @@
 #include "headers/graph.h"
+#include <iostream>
 
 // constructor
 Graph::Graph(const sf::RenderWindow &win)
@@ -6,6 +7,7 @@ Graph::Graph(const sf::RenderWindow &win)
       canvasSprite(canvasTexture) {
   sf::Image image(win.getSize(), sf::Color::White);
   origin = sf::Vector2f(win.getSize().x / 2.0, win.getSize().y / 2.0);
+  center = origin;
   scale = 1;
 }
 
@@ -18,10 +20,13 @@ void Graph::setOrigin(const sf::RenderWindow &win, const sf::Vector2f &o) {
 
 void Graph::setScale(const double s) { scale = s; }
 
+void Graph::setCenter(const sf::Vector2f &c) { center = c; }
+
 // getters
 sf::Vector2f Graph::getOrigin() { return origin; }
 double Graph::getScale() { return scale; }
 sf::Sprite Graph::getCanvas() { return canvasSprite; }
+sf::Vector2f Graph::getCenter() { return center; }
 
 // other functions
 
@@ -29,19 +34,15 @@ void Graph::drawPoint(const sf::Vector2u &pos) {
   canvas.setPixel(pos, sf::Color::Black);
 }
 
-void Graph::drawPointIt(const sf::Vector2u &pos, unsigned it) {
+void Graph::drawPointIt(const sf::Vector2u &pos, unsigned it, unsigned maxIt) {
   sf::Color color;
-  if (it > 35) {
-    color = sf::Color::Red;
-  } else if (it > 25) {
-    color = sf::Color::Yellow;
-  } else if (it > 15) {
-    color = sf::Color::White;
-  } else {
-    color = sf::Color::Blue;
-  }
+  float t = it / float(maxIt); // normalized 0..1
+  std::uint8_t r = static_cast<std::uint8_t>(15 * (1 - t) * t * t * t * 255);
+  std::uint8_t g =
+      static_cast<std::uint8_t>(10 * (1 - t) * (1 - t) * t * t * 255);
+  std::uint8_t b = 128;
 
-  canvas.setPixel(pos, color);
+  canvas.setPixel(pos, sf::Color(r, g, b));
 }
 
 void Graph::updateTexture() { canvasTexture.update(canvas); }
