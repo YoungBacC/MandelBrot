@@ -1,5 +1,5 @@
 # MandelBrot
-![animation](https://github.com/user-attachments/assets/683d20e8-f74a-49de-8c69-5edcdf0d2155)
+![animation](https://github.com/user-attachments/assets/d0d56b09-425a-4143-bb0a-78064f1c1ea0)
 
 
 
