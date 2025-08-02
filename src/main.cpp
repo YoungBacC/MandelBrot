@@ -7,13 +7,14 @@ void saveScreenshot(sf::RenderWindow &, int &);
 //  define constants here
 int main() {
   // window
-  sf::RenderWindow window(sf::VideoMode({1920, 1080}), "my window");
+  sf::RenderWindow window(sf::VideoMode({2560, 1664}), "my window");
   Graph graph(window);
-  graph.setScale(1);
-  graph.setCenter({136.57, 247.83});
+  graph.setScale(1.1);
+  graph.setCenter(
+      sf::Vector2f(window.getSize().x / 2.f - 100, window.getSize().y / 2.f));
+  // graph.setCenter({136.57, 247.83});
   MandelBrot set;
   set.loop(graph, window);
-  int ssCount = 0;
   // main loop
   while (window.isOpen()) {
     // define events here
@@ -23,27 +24,12 @@ int main() {
       }
     }
 
-    bool scaled = false;
     handleKeyInputs(window, graph, set);
-
-    if (graph.getScale() > 0.0001) {
-      float currScale = graph.getScale();
-      float inverseScale = 1 / currScale;
-      float logScale = std::log(inverseScale);
-      logScale += 0.5;
-      graph.setScale(std::exp(-logScale));
-      set.loop(graph, window);
-      scaled = true;
-    }
 
     window.clear();
 
     // draw here
     window.draw(graph.getCanvas());
-
-    if (scaled) {
-      saveScreenshot(window, ssCount);
-    }
 
     window.display();
   }
